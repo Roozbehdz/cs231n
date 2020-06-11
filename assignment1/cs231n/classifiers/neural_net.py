@@ -149,7 +149,7 @@ class TwoLayerNet(object):
     # print(np.exp(layer3).T[0,:] / rows)
     # print(np.exp(layer3).T / rows)
     dLayer3 = np.transpose(np.exp(layer3).T / rows)
-    #print(dLayer3.shape)
+
     y_i = np.zeros(dLayer3.shape)
     y_i[np.arange(N), y] = 1
     dLayer3 -= y_i
